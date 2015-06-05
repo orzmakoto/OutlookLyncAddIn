@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2009/07/customui" onLoad="Ribbon_Load">
+	<ribbon>
+		<tabs>
+			<tab idMso="TabMail">
+				<group idMso="GroupMailRespond" visible="false"></group>
+				<group id="MyGroupMailRespond" label="返信" insertAfterMso="GroupMailRespond">
+					<button idMso="PostReply" size="large"/>
+					<button idMso="Reply" size="large"/>
+					<button idMso="ReplyAll" size="large"/>
+					<button idMso="Forward" size="large"/>
+					<button idMso="ReplyWithMeeting"/>
+
+					<menu idMso="PersonaSendIMMenu">
+						<button idMso="ReplyWithInstantMessage"/>
+						<button idMso="ReplyAllWithInstantMessage"/>
+						<button id="MyIMButton" 
+								label="相手を選んでIM送信" 
+								imageMso="ReplyAllWithInstantMessage"
+								onAction="ShowMessageClick"
+								/>
+					</menu>
+					<menu idMso="RespondActionsMenu">
+						<button idMso="ForwardAsAttachment"/>
+						<splitButton idMso="DialMenu">
+							<menu>
+								<button idMso="Call"/>
+							</menu>
+						</splitButton>
+					</menu>
+				</group>
+			</tab>
+		</tabs>
+	</ribbon>
+</customUI>
+
