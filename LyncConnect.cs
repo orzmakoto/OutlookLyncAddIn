@@ -92,7 +92,7 @@ namespace OutlookLyncAddIn
 				}
 			}
 
-
+			//
 			var selecter = new Forms.AddressSelecter(recipientList);
 			selecter.ShowDialog();
 			if (selecter.DialogResult == DialogResult.Cancel || selecter.SelectedRecipient.Count == 0)
